@@ -1,41 +1,44 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Lovalova by lovasoa</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/lovasoa/lovalova">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/lovasoa/lovalova/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/lovasoa/lovalova/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-  <title>Lovalova</title>
-  <meta name="description" content="Lovalova is a game in which you are a small square that has to avoid long rectangles.">
+    <div class="wrapper">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-</head>
-
-<body>
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Lovalova</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">Lovalova is a game in which you are a small square that has to avoid long rectangles.</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/lovasoa/lovalova/zipball/master" class="download-button zip"><span>Download source</span></a>
-          <a href="https://github.com/lovasoa/lovalova" class="code">View Lovalova on GitHub</a>
+      <section>
+        <div id="title">
+          <h1>Lovalova</h1>
+          <p>Lovalova is a game in which you are a small square that has to avoid long rectangles.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/lovasoa">lovasoa</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h1>
+
+        <h1>
 <a name="lovalova" class="anchor" href="#lovalova"><span class="octicon octicon-link"></span></a>lovalova</h1>
 
 <p>Lovalova is a game in which you are a small square that has to avoid long rectangles.</p>
@@ -46,6 +49,39 @@
 <p><img src="http://lovasoa.github.io/lovalova/screenshot.png" alt="lovalova screenshot"></p>
 
 <h2>
+<a name="installation-instruction" class="anchor" href="#installation-instruction"><span class="octicon octicon-link"></span></a>Installation instruction</h2>
+
+<h3>
+<a name="windows" class="anchor" href="#windows"><span class="octicon octicon-link"></span></a>Windows</h3>
+
+<p>Just download <a href="http://lovasoa.github.io/lovalova/lovalova.exe">lovalova.exe</a> and launch it.</p>
+
+<h3>
+<a name="linux" class="anchor" href="#linux"><span class="octicon octicon-link"></span></a>Linux</h3>
+
+<p>Open a terminal and write the following lines:</p>
+
+<div class="highlight highlight-bash"><pre>sudo apt-get install love
+wget http://lovasoa.github.io/lovalova/lovalova.love
+love lovalova.love
+</pre></div>
+
+<h3>
+<a name="macos" class="anchor" href="#macos"><span class="octicon octicon-link"></span></a>MacOS</h3>
+
+<p>Download <a href="https://www.love2d.org">LÖVE</a> for mac and the <code>.love</code> file.
+Then open the <code>.love</code> file with the LÖVE application.</p>
+
+<h2>
+<a name="downloads" class="anchor" href="#downloads"><span class="octicon octicon-link"></span></a>Downloads</h2>
+
+<ul>
+<li>Windows executable: <a href="http://lovasoa.github.io/lovalova/lovalova.exe">lovalova.exe</a>
+</li>
+<li>
+<code>.love</code> file: <a href="http://lovasoa.github.io/lovalova/lovalova.love">lovalova.love</a>
+</li>
+</ul><h2>
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <ul>
@@ -56,26 +92,10 @@
 <a name="informations" class="anchor" href="#informations"><span class="octicon octicon-link"></span></a>Informations</h2>
 
 <p>This is only my second project in lua, and I did it in one evening. The code quality is not very high...</p>
-        </article>
-      </div>
+      </section>
+
     </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/lovasoa" class="avatar"><img src="https://avatars2.githubusercontent.com/u/552629?s=60" width="48" height="48"/></a> <a href="https://github.com/lovasoa">lovasoa</a> maintains <a href="https://github.com/lovasoa/lovalova">Lovalova</a></p>
-
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/lovasoa/lovalova/tarball/master" class="tar">tar</a><a href="https://github.com/lovasoa/lovalova/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
-
-  
-</body>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
 </html>
