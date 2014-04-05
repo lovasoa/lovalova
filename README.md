@@ -2,3 +2,15 @@ lovalova
 ========
 
 Lovalova is a game in which you are a small square that has to avoid long rectangles.
+
+## Screenshot
+![lovalova screenshot](http://img15.hostingpics.net/pics/816989screenshot.png)
+
+## Requirements
+ * LÖVE (https://www.love2d.org)
+
+This game is written in lua, using the game framework LÖVE.
+
+## Informations
+ This is only my second project in lua, and I did it in one evening. The code quality is not very high...
+ 
