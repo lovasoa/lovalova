@@ -8,7 +8,7 @@ Lovalova is a game in which you are a small square that has to avoid long rectan
 
 ## Installation instruction
 ### Windows
-Just download [lovalova.love](http://lovasoa.github.io/lovalova/lovalova.love) and launch it.
+Just download [lovalova.exe](http://lovasoa.github.io/lovalova/lovalova.exe) and launch it.
 
 ### Linux
 Open a terminal and write the following lines:
