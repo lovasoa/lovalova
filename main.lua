@@ -1,5 +1,10 @@
 function love.load()
-	screen = {love.graphics.getMode()}
+	if love.graphics.getMode then -- 0.8
+		screen = {love.graphics.getMode()}
+	else -- 0.9
+		screen = {love.window.getMode()}
+	end
+
 	font = love.graphics.newFont("PT Sans Caption.ttf", 14)
 	love.graphics.setFont(font)
 
