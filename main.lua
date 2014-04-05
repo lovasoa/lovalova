@@ -1,8 +1,26 @@
+score = {
+	current = 0,
+	best = 0
+}
+function score:set (n)
+	self.current = math.floor(n)
+	if n>self.best then self.best = n end
+end
+function score:save()
+	love.filesystem.write('score', self.best)
+end
+function score:load()
+	self.best = math.max(love.filesystem.read('score'), self.best)
+end
+
 function love.load()
-	if love.graphics.getMode then -- 0.8
-		screen = {love.graphics.getMode()}
-	else -- 0.9
+	icon = love.graphics.newImage("icon.png")
+	if love.window then -- 0.9
+		love.window.setIcon(icon:getData())
 		screen = {love.window.getMode()}
+	else  -- 0.8
+		love.graphics.setIcon(icon)
+		screen = {love.graphics.getMode()}
 	end
 
 	font = love.graphics.newFont("PT Sans Caption.ttf", 14)
@@ -14,13 +32,15 @@ function love.load()
 	acceleration = 4500
 	friction = 0.001
 	lost = false
-	time = 0
-	ennemies = {{pos={10,0}, size={100,5}, speed={0,100}}}
+	score:load()
+	score:set(0)
+	startTime = love.timer.getTime()
+	ennemies = {}
 end
 
 function love.draw()
 	love.graphics.setColor(199,199,255,255)
-	love.graphics.print(string.format("Score: %d", time), 0,0)
+	love.graphics.print(string.format("Score: %d  | Best: %d", score.current, score.best), 0,0)
 	if lost then
 		return love.graphics.print("You loose ! Press space to try again.", 100,100)
 	end
@@ -39,7 +59,8 @@ end
 
 function love.update(dt)
 	if lost then return end
-	time = time + dt
+
+	score:set((love.timer.getTime() - startTime))
 
 	local directions = {{"left", "right"},{"up","down"}}
 
@@ -83,7 +104,7 @@ function love.update(dt)
 	end
 
 	-- add ennemies
-	if math.random() < 0.02 + 0.01*math.sqrt(time) then
+	if math.random() < 0.02 + 0.01*math.sqrt(score.current) then
 		local horiz = math.random() < 0.5
 		local newenn = {pos={0,0}, size={3,3}, speed={0,0} }
 		for n=1,2 do
@@ -101,8 +122,40 @@ end
 function love.keypressed(key)
 	if key == ' ' then
 		love.load()
+	elseif key == 'q' and os and os.exit then
+		os.exit()
+	elseif key == 'f' then -- fullscreen
+		love.mouse.setVisible(false)
+		if love.window then -- 0.9
+			if love.window.getFullscreen() then return end
+			love.window.setFullscreen(true, 'desktop')
+			screen = {love.window.getMode()}
+		else -- 0.8
+			if ({love.graphics.getMode()})[3] then return end
+			for i,mode in pairs(love.graphics.getModes()) do
+				if mode.width*mode.height > screen[1]*screen[2] then
+					screen[1] = mode.width
+					screen[2] = mode.height
+				end
+			end
+			love.graphics.setMode(screen[1], screen[2], true)
+		end
+	elseif key == 'escape' then
+		love.mouse.setVisible(true)
+		if love.window then
+			if not love.window.getFullscreen() then return end
+			love.window.setFullscreen(false)
+			screen = {love.window.getMode()}
+		else
+			if not ({love.graphics.getMode()})[3] then return end
+			screen[1] = 800
+			screen[2] = 600
+			love.graphics.setMode(screen[1], screen[2], false)
+		end
 	end
-	if key == 'f' then
-		love.graphics.toggleFullscreen()
-	end
+
+end
+
+function love.quit ()
+	score:save()
 end
