@@ -6,9 +6,25 @@ Lovalova is a game in which you are a small square that has to avoid long rectan
 ## Screenshot
 ![lovalova screenshot](http://lovasoa.github.io/lovalova/screenshot.png)
 
-## Download
-  Downloads:
-    * Windows executable: (lovalova.exe | http://lovasoa.github.io/lovalova/lovalova.exe )
+## Installation instruction
+### Windows
+Just download [lovalova.exe](http://lovasoa.github.io/lovalova/lovalova.exe) and launch it.
+
+### Linux
+Open a terminal and write the following lines:
+```bash
+sudo apt-get install love
+wget http://lovasoa.github.io/lovalova/lovalova.love
+love lovalova.love
+```
+
+### MacOS
+Download [LÖVE](https://www.love2d.org) for mac and the `.love` file.
+Then open the `.love` file with the LÖVE application.
+
+## Downloads
+ * Windows executable: [lovalova.exe](http://lovasoa.github.io/lovalova/lovalova.exe)
+ * `.love` file: [lovalova.love](http://lovasoa.github.io/lovalova/lovalova.love)
 
 ## Requirements
  * LÖVE (https://www.love2d.org)
