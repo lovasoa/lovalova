@@ -4,7 +4,7 @@ lovalova
 Lovalova is a game in which you are a small square that has to avoid long rectangles.
 
 ## Screenshot
-![lovalova screenshot](http://img15.hostingpics.net/pics/816989screenshot.png)
+![lovalova screenshot](http://lovasoa.github.io/lovalova/screenshot.png)
 
 ## Requirements
  * LÖVE (https://www.love2d.org)
