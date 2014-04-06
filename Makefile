@@ -1,4 +1,4 @@
-SOURCES=main.lua conf.lua PT\ Sans\ Caption.ttf
+SOURCES=main.lua conf.lua PT\ Sans\ Caption.ttf icon.png
 
 all: lovalova.love windows64 windows32 mac
 
