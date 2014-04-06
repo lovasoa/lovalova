@@ -4,7 +4,9 @@ score = {
 }
 function score:set (n)
 	self.current = math.floor(n)
-	if n>self.best then self.best = n end
+	if self.current > self.best then
+		self.best = self.current
+	end
 end
 function score:save()
 	love.filesystem.write('score', self.best)
@@ -13,7 +15,7 @@ function score:load()
 	if love.filesystem.exists('score') then
 		self.best = math.max(love.filesystem.read('score'), self.best)
 	else
-		love.filesystem.write('score', 0)
+		love.filesystem.write('score', '0')
 	end
 end
 
@@ -96,7 +98,7 @@ function love.update(dt)
 	for ennum=1,#ennemies do
 		local e = ennemies[ennum]
 		if not e then break end
-		lost = true
+		local lost = true
 		for i = 1,2 do
 			if e.pos[i] > screen[i] or e.pos[i] < 0 then
 				table.remove(ennemies, ennum)
@@ -104,7 +106,9 @@ function love.update(dt)
 			e.pos[i] = e.pos[i] + e.speed[i]*dt
 			lost = lost and pos[i] + size[i] > e.pos[i] and e.pos[i] + e.size[i] > pos[i]
 		end
-		if lost then break end
+		if lost then 
+			return loose()
+		end
 	end
 
 	-- add ennemies
@@ -127,7 +131,7 @@ function love.keypressed(key)
 	if key == ' ' then
 		love.load()
 	elseif key == 'q' and os and os.exit then
-		os.exit()
+		quit()
 	elseif key == 'f' then -- fullscreen
 		love.mouse.setVisible(false)
 		if love.window then -- 0.9
@@ -160,6 +164,18 @@ function love.keypressed(key)
 
 end
 
-function love.quit ()
+function loose()
+	lost = true
 	score:save()
+end
+
+function love.quit ()
+	-- Executed before quitting
+	score:save()
+end
+
+function quit()
+	-- force exit
+	love.quit()
+	os.exit()
 end
