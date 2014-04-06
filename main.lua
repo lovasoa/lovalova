@@ -52,7 +52,7 @@ function love.draw()
 	-- ennemies
 	for i=1,#ennemies do
 		local e = ennemies[i]
-		love.graphics.setColor(e.speed[1],e.speed[2],98,255)
+		love.graphics.setColor(e.speed[1]*255/150,e.speed[2]*255/150,255,255)
 		love.graphics.rectangle("line", e.pos[1], e.pos[2], e.size[1], e.size[2])
 	end
 end
