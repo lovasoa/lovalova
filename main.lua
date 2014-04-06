@@ -10,7 +10,11 @@ function score:save()
 	love.filesystem.write('score', self.best)
 end
 function score:load()
-	self.best = math.max(love.filesystem.read('score'), self.best)
+	if love.filesystem.exists('score') then
+		self.best = math.max(love.filesystem.read('score'), self.best)
+	else
+		love.filesystem.write('score', 0)
+	end
 end
 
 function love.load()
