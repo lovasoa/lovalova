@@ -1,7 +1,7 @@
 lovalova
 ========
 
-Lovalova is a game in which you are a small square that has to avoid long rectangles.
+[Lovalova](http://lovasoa.github.io/lovalova) is a game in which you are a small square that has to avoid long rectangles.
 
 ## Screenshot
 ![lovalova screenshot](http://lovasoa.github.io/lovalova/screenshot.png)
