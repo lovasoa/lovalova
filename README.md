@@ -34,7 +34,7 @@ love lovalova.love
      Key     |      Action
 ------------ | ---------------------
    Arrows    | Move your character
-    `p`      | Pause the game
+    `p`      | Pause/Resume the game
     `f`      | Switch to fullscreen mode
  `escape`    | Escape fullscreen
     `q`      | Quit
