@@ -64,7 +64,7 @@ function love.draw()
 end
 
 function love.update(dt)
-	if lost then return end
+	if lost or paused then return end
 
 	score:set((love.timer.getTime() - startTime))
 
@@ -130,6 +130,8 @@ end
 function love.keypressed(key)
 	if key == ' ' then
 		love.load()
+	elseif key == 'p' then
+		paused = not paused
 	elseif key == 'q' and os and os.exit then
 		quit()
 	elseif key == 'f' then -- fullscreen
