@@ -2,8 +2,11 @@ SOURCES=main.lua conf.lua PT\ Sans\ Caption.ttf
 
 all: lovalova.love windows mac
 
-windows: lovalova.love
-	cd windows && $(MAKE)
+windows64: lovalova.love
+	cd windows64 && $(MAKE)
+
+windows32: lovalova.love
+	cd windows32 && $(MAKE)
 
 mac: lovalova.love
 	cd mac && $(MAKE)
@@ -16,4 +19,4 @@ clean:
 	cd windows && $(MAKE) clean
 	cd mac && $(MAKE) clean
 
-.PHONY: windows mac clean
+.PHONY: windows64 windows32 mac clean

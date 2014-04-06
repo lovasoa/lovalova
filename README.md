@@ -8,7 +8,10 @@ Lovalova is a game in which you are a small square that has to avoid long rectan
 
 ## Installation instruction
 ### Windows
-Just download [lovalova-windows64.zip](http://lovasoa.github.io/lovalova/lovalova-windows64.zip), uncompress the zip file (wherever you want) and launch `lovalova.exe`.
+Just download the version corresponding to your architecture (32 or 64 bits), uncompress the zip file (wherever you want) and launch `lovalova.exe`.
+
+ * 64 bits : [lovalova-windows64.zip](http://lovasoa.github.io/lovalova/lovalova-windows64.zip)
+ * 32 bits : [lovalova-windows32.zip](http://lovasoa.github.io/lovalova/lovalova-windows32.zip)
 
 ### MacOS
 Download [lovalova-mac64.zip](http://lovasoa.github.io/lovalova/lovalova-mac64.zip), uncompress the zip file in your Application folder and launch `lovalova.app`.
@@ -23,6 +26,7 @@ love lovalova.love
 
 ## Downloads
  * Windows 64 bits executable: [lovalova-windows64.zip](http://lovasoa.github.io/lovalova/lovalova-windows64.zip)
+ * Windows 32 bits executable: [lovalova-windows32.zip](http://lovasoa.github.io/lovalova/lovalova-windows32.zip)
  * MacOS application: [lovalova-mac64.zip](http://lovasoa.github.io/lovalova/lovalova-mac64.zip)
  * `.love` file: [lovalova.love](http://lovasoa.github.io/lovalova/lovalova.love)
 
