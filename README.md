@@ -30,6 +30,15 @@ love lovalova.love
  * MacOS application: [lovalova-mac64.zip](http://lovasoa.github.io/lovalova/lovalova-mac64.zip)
  * `.love` file: [lovalova.love](http://lovasoa.github.io/lovalova/lovalova.love)
 
+### How to play
+     Key     |      Action
+------------ | ---------------------
+   Arrows    | Move your character
+    `p`      | Pause the game
+    `f`      | Switch to fullscreen mode
+ `escape`    | Escape fullscreen
+    `q`      | Quit
+
 ## Requirements
  * LÖVE (https://www.love2d.org)
 
