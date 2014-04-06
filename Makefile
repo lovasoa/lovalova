@@ -1,6 +1,6 @@
 SOURCES=main.lua conf.lua PT\ Sans\ Caption.ttf
 
-all: lovalova.love windows mac
+all: lovalova.love windows64 windows32 mac
 
 windows64: lovalova.love
 	cd windows64 && $(MAKE)
@@ -16,7 +16,8 @@ lovalova.love: $(SOURCES)
 
 clean:
 	rm -rf lovalova.love
-	cd windows && $(MAKE) clean
+	cd windows64 && $(MAKE) clean
+	cd windows32 && $(MAKE) clean
 	cd mac && $(MAKE) clean
 
 .PHONY: windows64 windows32 mac clean
