@@ -5,7 +5,7 @@ function love.conf(t)
     t.identity = "lovalova"            -- The name of the save directory (string)
     -- t.version = "0.8.0"      -- Works with 0.8 and 0.9
     t.console = false           -- Attach a console (boolean, Windows only)
-    t.release = false           -- Enable release mode (boolean)
+    t.release = true           -- Enable release mode (boolean)
     t.screen.width = 800        -- The window width (number)
     t.screen.height = 600       -- The window height (number)
     t.screen.fullscreen = false -- Enable fullscreen (boolean)
