@@ -2,7 +2,7 @@ function love.conf(t)
     t.title = "Lova lova"        -- The title of the window the game is in (string)
     t.author = "Ophir LOJKINE"        -- The author of the game (string)
     t.url = "https://lovasoa.github.io/lovalova"                 -- The website of the game (string)
-    t.identity = nil            -- The name of the save directory (string)
+    t.identity = "lovalova"            -- The name of the save directory (string)
     -- t.version = "0.8.0"      -- Works with 0.8 and 0.9
     t.console = false           -- Attach a console (boolean, Windows only)
     t.release = false           -- Enable release mode (boolean)
