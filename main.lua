@@ -40,7 +40,7 @@ function love.load()
 	lost = false
 	score:load()
 	score:set(0)
-	startTime = love.timer.getTime()
+	timeRunning = 0
 	ennemies = {}
 end
 
@@ -66,7 +66,8 @@ end
 function love.update(dt)
 	if lost or paused then return end
 
-	score:set((love.timer.getTime() - startTime))
+	timeRunning = timeRunning + dt
+	score:set(timeRunning)
 
 	local directions = {{"left", "right"},{"up","down"}}
 
