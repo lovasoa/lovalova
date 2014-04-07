@@ -61,6 +61,12 @@ function love.draw()
 		love.graphics.setColor(e.speed[1]*255/150,e.speed[2]*255/150,255,255)
 		love.graphics.rectangle("line", e.pos[1], e.pos[2], e.size[1], e.size[2])
 	end
+
+	if paused then
+			love.graphics.setColor(199,199,255,255)
+			love.graphics.print("Game paused. Press p to resume.", 100,100)
+	end
+
 end
 
 function love.update(dt)
